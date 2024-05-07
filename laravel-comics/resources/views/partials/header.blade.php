@@ -36,6 +36,7 @@
 
 
 
+
     </div>
 
     <div class="img_jumbo">
@@ -43,6 +44,11 @@
 
     </div>
 
+    <div class="series">
+        <nav>
+            Series
+        </nav>
 
+    </div>
 
 </header>
