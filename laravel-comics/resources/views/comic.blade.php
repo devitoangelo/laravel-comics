@@ -4,7 +4,7 @@
 @section('content')
    
 
-{{-- @dd('comic') --}}
+
 
 
 {{$comic['title']}}

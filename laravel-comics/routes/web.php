@@ -13,7 +13,7 @@ Route::get('/comics', function () {
     //ho passato l'array in config,db.php
     $comics = config('db.comics');
 
-    return view('comics', ['comics' => $comics]);
+    return view('comics', ['comic' => $comics]);
 })->name('comics');
 
 
@@ -38,4 +38,4 @@ Route::get('/comics/{id}', function ($id) {
     $comic = config('db.comics')[$id];
 
     return view('comic', compact('comic'));
-})->name('$comic');
+})->name('comic');
