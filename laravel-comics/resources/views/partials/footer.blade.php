@@ -40,13 +40,25 @@
 
                 <img src="{{ Vite::asset('resources/img/logo.png') }}" alt="">
                 <p style="color: gray; font-size:small">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eum, culpa,natus inventore dolore, ex officia iure ratione vitae sequi quia sed consectetur debitis quos odio?
-            </p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eum, culpa,natus inventore
+                    dolore, ex officia iure ratione vitae sequi quia sed consectetur debitis quos odio?
+                </p>
             </div>
 
         </div>
     </div>
     <div class="container-fluid sign_up">
+        <div class="btn ciao">
+            SIGN-UP NOW
+        </div>
+        <div class= "following_as">
+            <nan style="color: skyblue">FOLLOW US</nan>
+            <img src="{{ Vite::asset('resources/img/footer-facebook.png') }}" alt="">
+            <img src="{{ Vite::asset('resources/img/footer-twitter.png') }}" alt="">
+            <img src="{{ Vite::asset('resources/img/footer-youtube.png') }}" alt="">
+            <img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}" alt="">
+            <img src="{{ Vite::asset('resources/img/footer-periscope.png') }}" alt="">
+        </div>
 
 
 
