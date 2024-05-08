@@ -38,6 +38,21 @@ footer {
 .sign_up{
     width: 100%;
     height: 50px;
-    background-color: gray;
+    background-color: #303030;
     margin-top: -1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ciao{
+    border: 1px solid skyblue;
+    color: white;
+}
+
+.following_as{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
 }

@@ -18,8 +18,12 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/comics', function () {
-    return view('comics');
-})->name('comics');
+
+        $comics = config('db.comics');
+        //ho passato l'array in config,db.php
+
+    return view('comics', compact('comics'));
+})->name('comics' );
 
   
 Route::get('/blog', function () {
