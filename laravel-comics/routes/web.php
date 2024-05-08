@@ -13,7 +13,7 @@ Route::get('/comics', function () {
     //ho passato l'array in config,db.php
     $comics = config('db.comics');
 
-    return view('comics', ['comics'=> $comics]);
+    return view('comics', ['comics' => $comics]);
 })->name('comics');
 
 
@@ -28,7 +28,11 @@ Route::get('/blog', function () {
 //prende il singola elemento
 Route::get('/comics/{id}', function ($id) {
 
-    
+
+    abort_unless(
+        $id >= 0 && $id < count(config('db.comics')), 404, 'Not Found');
+
+
 
 
     $comic = config('db.comics')[$id];
