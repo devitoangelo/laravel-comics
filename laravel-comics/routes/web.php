@@ -10,10 +10,10 @@ Route::get('/', function () {
 
 Route::get('/comics', function () {
 
-    $comics = config('db.comics');
     //ho passato l'array in config,db.php
+    $comics = config('db.comics');
 
-    return view('comics', compact('comics'));
+    return view('comics', ['comics'=> $comics]);
 })->name('comics');
 
 
@@ -28,11 +28,10 @@ Route::get('/blog', function () {
 //prende il singola elemento
 Route::get('/comics/{id}', function ($id) {
 
-
-    $comics = config('db.comics')[$id];
-    dd($comics);
-    return view('comics', compact('comics'));
-});
+    
 
 
+    $comic = config('db.comics')[$id];
 
+    return view('comic', compact('comic'));
+})->name('$comic');
