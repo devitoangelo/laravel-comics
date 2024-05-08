@@ -2,30 +2,37 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
+
 Route::get('/comics', function () {
 
-        $comics = config('db.comics');
-        //ho passato l'array in config,db.php
+    $comics = config('db.comics');
+    //ho passato l'array in config,db.php
 
     return view('comics', compact('comics'));
-})->name('comics' );
+})->name('comics');
 
-  
+
+
 Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
+
+
+
+
+//prende il singola elemento
+Route::get('/comics/{id}', function ($id) {
+
+
+    $comics = config('db.comics')[$id];
+    dd($comics);
+    return view('comics', compact('comics'));
+});
+
+
+
